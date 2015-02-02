@@ -1,0 +1,27 @@
+
+Clonado:
+git clone <direccion>
+
+Subida:
+git add <archivos> --- Para añadir archivos
+git rm <archivos> --- Para quitar archivos
+git mv <archivos> <archivos_nueva_direccion> --- Para mover archivos
+git commit -m "Mensaje" --- Para crear el commit
+git push <nombre_repo> <nombre_rama> --- Para lanzar el commit al repositorio que queramos en la rama que queramos
+
+Modificaciones:
+git commit --amend --- Para arreglar el ultimo commit que hemos hecho
+git reset HEAD <file> --- Para quitar archivos de un git add
+
+Bajada:
+git fetch <nombre_repo> --- Para bajar un repo sin unirlo a nuestro repo local
+git pull <nombre_repo> --- Para bajar un repo uniendolo a nuestro repo local
+
+Estado del repo:
+git status --- Para ver los cambios locales de nuestro repo que no han sido lanzados
+git log --- Para ver los commits lanzados en dicho repo
+git log -2 --- Para mostrar los dos últimos commits de ese repo
+git log -p --- Muestra las diferencias que hay entre los commits
+
+
+Para saber más: http://git-scm.com/book/es-ni/v1/Git-Basics
