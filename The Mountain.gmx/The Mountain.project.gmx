@@ -3,9 +3,12 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\exCamera</extension>
+  </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\spr_stone</sprite>
     <sprite>sprites\spr_grass</sprite>
     <sprite>sprites\spr_player</sprite>
   </sprites>
@@ -14,9 +17,11 @@
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
+    <object>objects\obj_ex_camera</object>
     <object>objects\obj_grass</object>
     <object>objects\obj_player</object>
     <object>objects\obj_control</object>
+    <object>objects\obj_stone</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\stage_1</room>
