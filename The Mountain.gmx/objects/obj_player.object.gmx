@@ -76,10 +76,11 @@ move = move_left + move_right;
 hsp = move * movespeed;
 if (vsp &lt; 10) vsp += grav;
 
+/*  Repetido
 if (place_meeting(x,y+1,obj_grass))
 {
     vsp = jump * -jumpspeed
-}
+}*/
 
 if (place_meeting(x,y+1,obj_grass))
 {
@@ -97,16 +98,36 @@ if (place_meeting(x + hsp, y, obj_grass))
 }
 x += hsp;
  
-//Vertical Collision
+//New Vertical Collision
 if (place_meeting(x, y + vsp, obj_grass))
+{ 
+    if sign(vsp)&gt;0 {
+        while(!place_meeting(x,y+1,obj_grass))
+        {
+            y += 1;
+        }
+        vsp = 0;
+    } else {
+    vsp = -movespeed/2;
+    }
+}
+// Old Vertical Collision
+/*if (place_meeting(x, y + vsp, obj_grass))
 {
     while(!place_meeting(x,y+sign(vsp),obj_grass))
     {
         y += sign(vsp);
     }
     vsp = 0;
-}
+}*/
 y += vsp;
+
+// Out of Screen
+if (x &lt; 0 || x &gt; room_width) {
+    x = room_width/2;
+    y = room_height-32;
+    vsp = 0;
+}
 </string>
           </argument>
         </arguments>
